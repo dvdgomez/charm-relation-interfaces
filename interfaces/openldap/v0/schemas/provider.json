@@ -1,0 +1,26 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+	"$id": "https://canonical.github.io/charm-relation-interfaces/openldap/schemas/provider.json",
+	"title": "`openldap` provider schema",
+	"description": "The `openldap` root schema comprises the entire provider databag for this interface.",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+	  "ca-cert",
+	  "sssd-conf"
+	],
+	"properties": {
+	  "ca-cert": {
+		"$ref": "#filedata"
+	  },
+	  "sssd-conf": {
+		"$ref": "#filedata"
+	  }
+	},
+	"$defs": {
+	  "filedata": {
+		"$anchor": "filedata",
+		"$ref": "https://raw.githubusercontent.com/j4m-can/hpct-parts/main/schemas/filedata.json"
+	  }
+	}
+  }
