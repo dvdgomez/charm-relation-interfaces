@@ -1,0 +1,7 @@
+providers:
+  - name: glauth-operator
+    url: https://github.com/canonical/glauth-operator
+
+consumers:
+  - name: glauth-operator
+    url: https://github.com/canonical/sssd-operator
