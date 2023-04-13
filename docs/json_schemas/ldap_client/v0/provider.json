@@ -1,0 +1,56 @@
+{
+  "title": "ProviderSchema",
+  "description": "Provider schema for ldap-client.",
+  "type": "object",
+  "properties": {
+    "unit": {
+      "$ref": "#/definitions/BaseModel"
+    },
+    "app": {
+      "$ref": "#/definitions/LdapClientProviderAppData"
+    }
+  },
+  "required": [
+    "app"
+  ],
+  "definitions": {
+    "BaseModel": {
+      "title": "BaseModel",
+      "type": "object",
+      "properties": {}
+    },
+    "LdapClientProviderAppData": {
+      "title": "LdapClientProviderAppData",
+      "type": "object",
+      "properties": {
+        "basedn": {
+          "title": "Base DN",
+          "type": "string"
+        },
+        "ca_cert": {
+          "title": "CA Certificate",
+          "type": "string"
+        },
+        "ldap_default_bind_dn": {
+          "title": "Default Bind DN",
+          "type": "string"
+        },
+        "ldap_password": {
+          "title": "LDAP Password",
+          "type": "string"
+        },
+        "ldap_uri": {
+          "title": "LDAP URI",
+          "type": "string"
+        }
+      },
+      "required": [
+        "basedn",
+        "ca_cert",
+        "ldap_default_bind_dn",
+        "ldap_password",
+        "ldap_uri"
+      ]
+    }
+  }
+}
